@@ -10,21 +10,22 @@
 <style>
   *,*::before,*::after{box-sizing:border-box}
   :root{
-    --bg:#FFFFFF;
-    --bg-alt:#F5F7FA;
-    --bg-card:#FAFBFC;
-    --bg-dark:#0A0A0A;
-    --bg-dark-2:#111214;
-    --text:#0F1419;
-    --text-muted:#6B7280;
-    --text-light:#9CA3AF;
-    --text-num:#E5E7EB;
-    --accent:#006DFF;
-    --accent-2:#00F5FF;
-    --line:#E5E7EB;
-    --line-2:#D1D5DB;
-    --line-dark:rgba(255,255,255,.1);
-    --icon-bg:#E8F0FE;
+    /* Warm-neutral master system (client brief pt 5): off-white, stone, warm charcoal, restrained clay accent */
+    --bg:#FBFAF7;
+    --bg-alt:#F2EEE7;
+    --bg-card:#F7F3EC;
+    --bg-dark:#231F1A;
+    --bg-dark-2:#2B2621;
+    --text:#2A2521;
+    --text-muted:#5C534A;
+    --text-light:#6E6659;
+    --text-num:#E7E1D5;
+    --accent:#A8603E;
+    --accent-2:#CBA06A;
+    --line:#E6E0D5;
+    --line-2:#D7CFC2;
+    --line-dark:rgba(255,255,255,.12);
+    --icon-bg:#F0E7DB;
     --f-display:'Jost',system-ui,-apple-system,sans-serif;
     --f-body:'Jost',system-ui,-apple-system,sans-serif;
     --f-mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
@@ -78,7 +79,7 @@
     letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);
     margin:0 0 1.2rem;display:block;
   }
-  .section-dark .eyebrow{color:#9CA3AF}
+  .section-dark .eyebrow{color:#B3A99C}
 
   /* headlines */
   h1.hero-title{font-size:clamp(2.2rem,5vw,3.7rem);letter-spacing:-.045em;font-weight:500;line-height:1.02}
@@ -88,7 +89,7 @@
   h3.card-title{font-size:1.15rem;font-weight:600;letter-spacing:-.015em;color:var(--text)}
   .section-dark h3.card-title{color:#fff}
   .lede{font-size:1.24rem;line-height:1.6;color:var(--text-muted);max-width:56ch}
-  .section-dark .lede{color:#9CA3AF}
+  .section-dark .lede{color:#B3A99C}
 
   /* buttons */
   .btn{
@@ -103,7 +104,7 @@
   .btn-primary{background:var(--text);color:#fff}
   .btn-primary:hover{background:var(--accent)}
   .btn-blue{background:var(--accent);color:#fff;border-radius:999px;padding:.85rem 1.6rem}
-  .btn-blue:hover{background:#0059cc}
+  .btn-blue:hover{background:#8C4A2E}
   .btn-ghost{background:transparent;color:var(--text);border-color:var(--line-2)}
   .btn-ghost:hover{border-color:var(--text);color:var(--text)}
   .section-dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.25)}
@@ -163,8 +164,8 @@
   .hero-overlay{
     position:absolute;inset:0;z-index:1;pointer-events:none;
     background:
-      linear-gradient(90deg,rgba(2,7,18,.7) 0%,rgba(2,7,18,.45) 45%,rgba(2,7,18,.18) 80%,rgba(2,7,18,.08) 100%),
-      linear-gradient(180deg,rgba(2,7,18,.15) 0%,rgba(2,7,18,0) 30%,rgba(2,7,18,.4) 100%);
+      linear-gradient(90deg,rgba(26,21,16,.7) 0%,rgba(26,21,16,.45) 45%,rgba(26,21,16,.18) 80%,rgba(26,21,16,.08) 100%),
+      linear-gradient(180deg,rgba(26,21,16,.15) 0%,rgba(26,21,16,0) 30%,rgba(26,21,16,.4) 100%);
   }
   .pixel-grid{display:none}
   .pixel-blocks{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
@@ -193,18 +194,18 @@
   .hero-trust .avatars{display:flex}
   .hero-trust .avatars span{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#374151,#1F2937);border:2px solid var(--bg-dark);margin-left:-8px}
   .hero-trust .avatars span:first-child{margin-left:0;background:linear-gradient(135deg,#4B5563,#111827)}
-  .hero-trust .txt{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;color:#9CA3AF}
+  .hero-trust .txt{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;color:#B3A99C}
   .hero-trust .txt b{color:#fff;font-weight:500}
-  .hero-trust .rating{margin-left:.85rem;padding-left:.85rem;border-left:1px solid var(--line-dark);color:#9CA3AF;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;display:inline-flex;align-items:center;gap:.35rem}
+  .hero-trust .rating{margin-left:.85rem;padding-left:.85rem;border-left:1px solid var(--line-dark);color:#B3A99C;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;display:inline-flex;align-items:center;gap:.35rem}
   .hero-trust .rating .star{color:var(--accent-2)}
   .hero-lower{margin-top:2.6rem;padding-top:1.6rem;display:flex;flex-direction:column;gap:1rem}
   @media(min-width:768px){.hero-lower{flex-direction:row;justify-content:space-between;align-items:flex-end;gap:2rem}}
-  .hero-scroll{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#9CA3AF;display:inline-flex;align-items:center;gap:.5rem}
+  .hero-scroll{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#B3A99C;display:inline-flex;align-items:center;gap:.5rem}
   .hero-scroll::after{content:"";width:32px;height:1px;background:#4B5563}
 
   /* ==================== MARQUEE ==================== */
   .marquee{background:var(--bg-dark-2);border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);color:#fff;overflow:hidden;padding:.85rem 0}
-  .marquee-track{display:flex;gap:2.5rem;animation:marquee 42s linear infinite;white-space:nowrap;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#D1D5DB}
+  .marquee-track{display:flex;gap:2.5rem;animation:marquee 42s linear infinite;white-space:nowrap;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#D7CFC2}
   .marquee-track span{display:inline-flex;align-items:center;gap:2.5rem}
   .marquee-track b{color:var(--accent);font-weight:400;font-family:var(--f-mono)}
   @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -215,14 +216,13 @@
   .trust-items{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem 2.4rem}
   .trust-item{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--f-mono);font-weight:400;font-size:.78rem;letter-spacing:.03em;color:var(--text);line-height:1.3;white-space:nowrap}
   .trust-item .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex:none}
-  @media(max-width:400px){.trust-item{white-space:normal;text-align:left}}
 
   /* ==================== SPLIT SECTION ==================== */
   .split{display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
   @media(min-width:960px){.split{grid-template-columns:1fr 1fr}}
   .body-grid{display:grid;gap:1.05rem;margin-top:1.6rem;max-width:56ch;color:var(--text-muted);font-size:1.17rem;line-height:1.6}
   .body-grid strong{color:var(--text);font-weight:600}
-  .section-dark .body-grid{color:#9CA3AF}
+  .section-dark .body-grid{color:#B3A99C}
   .section-dark .body-grid strong{color:#fff}
 
   /* Section 2 image + chat */
@@ -268,7 +268,7 @@
   .section-dark .process-card{background:transparent;border-color:var(--line-dark)}
   .section-dark .process-card .num{color:#374151}
   .section-dark .process-card h4{color:#fff}
-  .section-dark .process-card p{color:#9CA3AF}
+  .section-dark .process-card p{color:#B3A99C}
 
   /* ==================== TIMELINE FLOW (engagement-model style) ==================== */
   .section-flow{background:linear-gradient(180deg,#EEF3FF 0%,#F7F9FF 45%,#FFFFFF 100%)}
@@ -285,7 +285,7 @@
     .tl-card{border-left:none;padding:2rem 0 2.2rem}
     .tl-card+.tl-card{border-top:1px solid rgba(15,20,25,.08)}
   }
-  .tl-card:hover{background:linear-gradient(180deg,rgba(0,109,255,.06),rgba(0,109,255,0) 70%)}
+  .tl-card:hover{background:linear-gradient(180deg,rgba(168,90,60,.06),rgba(168,90,60,0) 70%)}
   /* rail: base line + animated blue fill + node */
   .tl-rail{position:relative;height:18px;margin-bottom:1.9rem}
   .tl-rail::before{
@@ -306,7 +306,7 @@
   }
   .tl-card:hover .tl-node{
     background:var(--accent);border-color:var(--accent);
-    box-shadow:0 0 0 6px rgba(0,109,255,.16);
+    box-shadow:0 0 0 6px rgba(168,90,60,.16);
   }
   .tl-label{
     font-family:var(--f-mono);font-size:.74rem;letter-spacing:.14em;
@@ -327,7 +327,7 @@
     padding:.5rem .9rem;border-radius:999px;transition:border-color .3s ease,color .3s ease;
   }
   .tl-pill svg{width:13px;height:13px;color:var(--accent)}
-  .tl-card:hover .tl-pill{border-color:rgba(0,109,255,.35);color:var(--text)}
+  .tl-card:hover .tl-pill{border-color:rgba(168,90,60,.35);color:var(--text)}
 
   /* ==================== STATS STRIP (video background) ==================== */
   .stats-strip{position:relative;color:#fff;padding:clamp(4rem,8vw,6.5rem) 0;overflow:hidden;isolation:isolate}
@@ -370,14 +370,14 @@
   .phase-tag{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.85rem;display:flex;align-items:center;gap:.55rem}
   .phase-tag b{color:var(--accent);font-weight:500}
   .phase.p2 .phase-tag b{color:var(--text)}
-  .section-dark .phase-tag{color:#9CA3AF}
+  .section-dark .phase-tag{color:#B3A99C}
   .section-dark .phase.p2 .phase-tag b{color:#fff}
   .phase h3{font-family:var(--f-display);font-size:1.6rem;letter-spacing:-.025em;font-weight:500;margin-bottom:.9rem;color:var(--text)}
   .section-dark .phase h3{color:#fff}
   .phase p{color:var(--text-muted);font-size:1.13rem;line-height:1.55}
-  .section-dark .phase p{color:#9CA3AF}
+  .section-dark .phase p{color:#B3A99C}
   .phase-icon-block{width:52px;height:52px;border-radius:6px;background:var(--icon-bg);color:var(--accent);display:grid;place-items:center;margin-bottom:1.3rem}
-  .phase.p2 .phase-icon-block{background:#F3F4F6;color:var(--text)}
+  .phase.p2 .phase-icon-block{background:#ECE7DE;color:var(--text)}
   .section-dark .phase.p2 .phase-icon-block{background:rgba(255,255,255,.06);color:#fff}
   .phase-icon-block svg{width:26px;height:26px}
 
@@ -404,7 +404,7 @@
   .cc-key{border-left:none;font-family:var(--f-display);font-weight:600;color:var(--text);font-size:1rem;background:var(--bg-alt);display:flex;align-items:center;letter-spacing:-.015em}
   .cc-them,.cc-us{display:flex;gap:.9rem;align-items:flex-start;font-size:1.09rem;line-height:1.55}
   .cc-them{color:var(--text-muted)}
-  .cc-us{background:rgba(0,109,255,.06);color:var(--text);font-weight:500;border-left-color:var(--accent)}
+  .cc-us{background:rgba(168,90,60,.06);color:var(--text);font-weight:500;border-left-color:var(--accent)}
   .cc-them p,.cc-us p{margin:0;flex:1;min-width:0}
   .cc-lbl{display:none}
 
@@ -414,7 +414,7 @@
   .cc-mark.good{background:var(--accent);color:#fff}
   .cc-row:hover .cc-mark{transform:scale(1.12)}
   .cc-row{transition:background .25s ease}
-  .cc-row:hover .cc-us{background:rgba(0,109,255,.1)}
+  .cc-row:hover .cc-us{background:rgba(168,90,60,.1)}
 
   /* mobile stack */
   @media(max-width:759px){
@@ -423,7 +423,7 @@
     .cc-key,.cc-them,.cc-us{border-left:none;padding:.85rem 1.2rem}
     .cc-key{background:transparent;padding:1.3rem 1.2rem .3rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:500}
     .cc-them,.cc-us{background:transparent;display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:.75rem;row-gap:.3rem;align-items:start}
-    .cc-us{border-left:3px solid var(--accent);background:rgba(0,109,255,.05);margin:0 1.2rem;padding-left:1rem}
+    .cc-us{border-left:3px solid var(--accent);background:rgba(168,90,60,.05);margin:0 1.2rem;padding-left:1rem}
     .cc-mark{grid-row:1 / span 2;margin-top:0}
     .cc-lbl{display:block;grid-column:2;align-self:center;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);font-weight:500}
     .cc-lbl-us{color:var(--accent)}
@@ -488,10 +488,10 @@
       position:absolute;left:clamp(1rem,5%,2rem);right:clamp(1rem,5%,2rem);bottom:clamp(1rem,4%,1.6rem);
       margin-top:0;z-index:3;border:1px solid rgba(255,255,255,.6);border-radius:14px;
       background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-      box-shadow:0 26px 64px -22px rgba(2,7,18,.5);
+      box-shadow:0 26px 64px -22px rgba(26,21,16,.5);
       padding:clamp(1.3rem,2vw,1.7rem);
     }
-    .guardrail-float:hover{transform:translateY(-8px);box-shadow:0 38px 84px -20px rgba(2,7,18,.62)}
+    .guardrail-float:hover{transform:translateY(-8px);box-shadow:0 38px 84px -20px rgba(26,21,16,.62)}
     .guardrail-float .note{font-size:.86rem;margin-top:1rem;padding-top:1rem}
   }
   /* staggered notification entrance (driven by .in-view from scroll observer) */
@@ -528,7 +528,7 @@
   .cta-blue{position:relative;background:var(--accent);color:#fff;padding:clamp(3rem,7vw,5rem) 0;overflow:hidden;isolation:isolate}
   .cta-blue-video{position:absolute;inset:0;z-index:0;overflow:hidden}
   .cta-blue-video video{width:100%;height:100%;object-fit:cover;display:block}
-  .cta-blue-video::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,109,255,.88) 0%,rgba(0,109,255,.78) 50%,rgba(0,89,204,.72) 100%)}
+  .cta-blue-video::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(168,90,60,.88) 0%,rgba(168,90,60,.78) 50%,rgba(140,74,48,.72) 100%)}
   .cta-blue .wrap{position:relative;z-index:1}
   .cta-blue-inner{display:grid;gap:2rem;align-items:center}
   @media(min-width:820px){.cta-blue-inner{grid-template-columns:1.5fr auto;gap:3rem}}
@@ -562,10 +562,10 @@
   .foot-brand{display:flex;flex-direction:column;align-items:flex-start}
   .foot-logo{height:44px;width:auto;display:block}
   @media(min-width:768px){.foot-logo{height:52px}}
-  .foot-meta{color:#9CA3AF;font-size:.86rem;line-height:1.75;font-family:var(--f-mono)}
+  .foot-meta{color:#B3A99C;font-size:.86rem;line-height:1.75;font-family:var(--f-mono)}
   .foot-meta a{color:#fff}
   .foot-meta a:hover{color:var(--accent-2)}
-  .foot-legal{border-top:1px solid var(--line-dark);padding-block:1.3rem;display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;color:#9CA3AF;font-size:.78rem;font-family:var(--f-mono)}
+  .foot-legal{border-top:1px solid var(--line-dark);padding-block:1.3rem;display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;color:#B3A99C;font-size:.78rem;font-family:var(--f-mono)}
   .foot-legal a:hover{color:var(--accent-2)}
 
   /* ==================== CLOSE HEADER — floating element ==================== */
@@ -585,7 +585,7 @@
     width:100%;height:100%;object-fit:contain;display:block;
     animation:closeBob 6.5s ease-in-out infinite;
     will-change:transform;
-    filter:drop-shadow(0 22px 44px rgba(0,109,255,.18));
+    filter:drop-shadow(0 22px 44px rgba(168,90,60,.18));
   }
   @keyframes closeBob{
     0%,100%{transform:translateY(0) rotate(-2.5deg)}
@@ -624,7 +624,7 @@
     .engine-card{border-right:0}
     .engine-card:last-child{border-bottom:0}
   }
-  .engine-card:hover{background:#FAFBFF}
+  .engine-card:hover{background:#FBF8F2}
   .ec-label{
     font-family:var(--f-mono);font-size:.82rem;font-weight:500;
     color:var(--text-light);letter-spacing:.01em;
@@ -729,7 +729,7 @@
 
   /* ==================== ENHANCED HOVER STATES ==================== */
   .feature-card{transition:transform .3s cubic-bezier(.22,1,.36,1),border-color .3s ease,background .3s ease,box-shadow .3s ease}
-  .feature-card:hover{transform:translateY(-6px);border-color:var(--accent);background:#fff;box-shadow:0 22px 45px -22px rgba(0,109,255,.18)}
+  .feature-card:hover{transform:translateY(-6px);border-color:var(--accent);background:#fff;box-shadow:0 22px 45px -22px rgba(168,90,60,.18)}
   .icon-chip{transition:background .3s ease,color .3s ease,transform .3s cubic-bezier(.22,1,.36,1)}
   .feature-card:hover .icon-chip{background:var(--accent);color:#fff;transform:scale(1.08) rotate(-4deg)}
   .feature-card h4{transition:color .3s ease}
@@ -743,7 +743,7 @@
   .section-dark .process-card:hover .num{color:var(--accent)}
 
   .phase{transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .3s ease,box-shadow .35s ease}
-  .phase:hover{transform:translateY(-6px);box-shadow:0 24px 45px -22px rgba(2,7,18,.12)}
+  .phase:hover{transform:translateY(-6px);box-shadow:0 24px 45px -22px rgba(26,21,16,.12)}
   .phase.p1:hover{border-color:var(--accent)}
   .phase.p2:hover{border-color:var(--text)}
   .phase-icon-block{transition:background .3s ease,color .3s ease,transform .35s cubic-bezier(.22,1,.36,1)}
@@ -751,7 +751,7 @@
   .phase.p2:hover .phase-icon-block{background:var(--text);color:#fff;transform:scale(1.08) rotate(4deg)}
 
   .path-card{transition:transform .3s cubic-bezier(.22,1,.36,1),border-color .3s ease,background .3s ease,box-shadow .3s ease}
-  .path-card:hover{transform:translateY(-6px);box-shadow:0 22px 45px -22px rgba(0,109,255,.18);background:#FAFBFF}
+  .path-card:hover{transform:translateY(-6px);box-shadow:0 22px 45px -22px rgba(168,90,60,.18);background:#FBF8F2}
 
   .stat-cell{transition:transform .35s cubic-bezier(.22,1,.36,1)}
   .stat-cell:hover{transform:translateY(-4px)}
@@ -764,9 +764,9 @@
   .trust-item:hover .dot{transform:scale(1.6);box-shadow:0 0 12px var(--accent)}
 
   .btn-primary,.btn-blue,.hero-cta{will-change:transform}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(0,109,255,.4)}
-  .hero-cta:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(0,109,255,.55)}
-  .btn-blue:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(0,109,255,.5)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(168,90,60,.4)}
+  .hero-cta:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(168,90,60,.55)}
+  .btn-blue:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(168,90,60,.5)}
 
   .qa button{transition:padding-left .3s ease}
   .qa:hover button{padding-left:.6rem}
@@ -829,7 +829,7 @@
   .qcard{padding:clamp(1.7rem,3.5vw,2.5rem);background:#fff;border:1px solid var(--line)}
   .qcard .alt-eyebrow{margin-bottom:1.15rem}
   .qcard .quote{max-width:18ch;font-size:clamp(1.5rem,3.4vw,2.2rem)}
-  .qcard-accent{border-color:var(--accent);background:rgba(0,109,255,.05)}
+  .qcard-accent{border-color:var(--accent);background:rgba(168,90,60,.05)}
   .qcard-accent .quote{color:var(--accent)}
 
   /* --- principle cards get a little breathing room --- */
@@ -854,7 +854,7 @@
   /* --- footer wordmark --- */
   .foot-word{font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,2.4vw,1.7rem);letter-spacing:-.02em;color:#fff;line-height:1.12;display:block}
   .foot-word sup{font-size:.5em;font-weight:500}
-  .foot-tagline{color:#9CA3AF;font-size:.9rem;line-height:1.65;max-width:46ch;margin-top:1.1rem;font-family:var(--f-body)}
+  .foot-tagline{color:#B3A99C;font-size:.9rem;line-height:1.65;max-width:46ch;margin-top:1.1rem;font-family:var(--f-body)}
   .foot-meta strong{color:#fff;font-weight:600;font-family:var(--f-display);font-size:.92rem;letter-spacing:0}
 
   /* ===================================================== */
@@ -873,7 +873,7 @@
   .principles-bg{position:relative;overflow:hidden;background:#0b0f17}
   .principles-bg > .wrap{position:relative;z-index:1}
   .principles-bg::before{content:"";position:absolute;inset:0;z-index:0;background-image:url('https://cdn.katalyst-crm.com/a/d8ac204e-29a3-e456-4dc5-691ecc5951df');background-repeat:no-repeat;background-position:center;background-size:cover;background-attachment:fixed;opacity:1;will-change:transform}
-  .principles-bg::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(8,11,18,.55) 0%,rgba(8,11,18,.35) 45%,rgba(8,11,18,.78) 100%)}
+  .principles-bg::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(26,21,16,.55) 0%,rgba(26,21,16,.35) 45%,rgba(26,21,16,.78) 100%)}
   /* cards get their own tinted backdrop so text stays legible over bright image areas */
   .principles-bg .principle-card{background:rgba(11,15,23,.55);border-color:rgba(255,255,255,.14);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
   .principles-bg .principle-card:hover{background:rgba(11,15,23,.65)}
@@ -952,12 +952,97 @@
   .hero-slider{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--bg-dark)}
   .hero-slider .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s cubic-bezier(.4,0,.2,1);will-change:opacity}
   .hero-slider .slide.active{opacity:1}
-  .hero-slider::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(8,11,18,.68) 0%,rgba(8,11,18,.5) 45%,rgba(8,11,18,.86) 100%)}
+  .hero-slider::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(26,21,16,.68) 0%,rgba(26,21,16,.5) 45%,rgba(26,21,16,.86) 100%)}
   .hero-quiet .hero-main{position:relative;z-index:2}
   .hero-quiet .hero-title,.hero-quiet .hero-recognition{text-shadow:0 2px 30px rgba(0,0,0,.35)}
   @media(prefers-reduced-motion:reduce){
     .hero-slider .slide{transition:none}
   }
+
+  /* ===================================================== */
+  /* ==== CLIENT REVISION PASS — Oct 2026 =============== */
+  /* Readability (pt 4) + warm-neutral system (pt 5) +     */
+  /* quiet Principles (pt 6), Architect portrait (pt 8),   */
+  /* quiet Lasting Change (pt 9), static hero (pt 10).     */
+  /* ===================================================== */
+
+  /* --- Pt 4: larger, higher-contrast type --- */
+  .eyebrow{font-size:.84rem;letter-spacing:.16em;color:var(--text-muted)}
+  .section-dark .eyebrow,.principles-bg .eyebrow{color:#CABFB0}
+  .nav-links a{font-size:.95rem;letter-spacing:.04em}
+  .nav-cta.btn{font-size:.95rem}
+  .btn{font-size:1rem}
+  .hero-cta,.hero-cta-secondary{font-size:.86rem}
+  .hc-sub{font-size:.82rem}
+  .phase-tag,.alt-eyebrow,.cite,.tl-label{font-size:.82rem}
+  .path-card .pt{font-size:.8rem}
+  .process-card .wk{font-size:.78rem}
+  .cc-th-lbl{font-size:.74rem}
+  .sig-role{font-size:.82rem;color:var(--text-muted)}
+  .body-grid{color:var(--text-muted);font-size:1.18rem}
+  .phase p{font-size:1.14rem}
+  .path-card p{font-size:1.02rem;color:var(--text-muted)}
+  .feature-card p{font-size:1.06rem}
+  .qa button{font-size:clamp(1.05rem,2.2vw,1.2rem)}
+  .qa .ans p{font-size:1.04rem;color:var(--text-muted)}
+  .qa[aria-expanded="true"] .ans{max-height:1600px}
+
+  /* Footer: warmer + more legible */
+  .foot-meta{font-size:.95rem;color:#CABFB0}
+  .foot-meta strong{font-size:1rem}
+  .foot-tagline{font-size:1rem;color:#CABFB0}
+  .foot-legal{font-size:.85rem;color:#CABFB0}
+  .section-dark .lede,.section-dark .body-grid,.section-dark .phase p,.section-dark .process-card p{color:#CABFB0}
+
+  /* --- Pt 5: Blueprint reads as EAHC (warm charcoal + off-white), not tech --- */
+  #blueprint.cta-blue{background:linear-gradient(135deg,#2A2521 0%,#231F1A 55%,#1E1A16 100%);color:#F4EFE7}
+  #blueprint.cta-blue h3{color:#F6F1E9}
+  #blueprint .eyebrow{color:rgba(244,239,231,.72)!important}
+  #blueprint .checks li{color:#EDE7DC}
+  #blueprint .checks li svg{color:var(--accent-2)}
+  .btn-cta-white{background:#F4EFE7;color:#2A2521;border-color:#F4EFE7}
+  .btn-cta-white:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  /* --- Pt 6 + client update: Three Governing Principles over a quiet environmental image, warm-dark overlay keeps the principles legible --- */
+  .principles-bg{background:linear-gradient(180deg,rgba(26,21,16,.74) 0%,rgba(26,21,16,.58) 45%,rgba(26,21,16,.84) 100%),url('https://cdn.katalyst-crm.com/a/0f544d37-4221-f991-78de-ef27e640e9e6') center center / cover no-repeat}
+  .principles-bg::before{content:none;background:none}
+  .principles-bg::after{content:none;background:none}
+  .principles-bg .principle-card{background:rgba(26,21,16,.42);border-color:rgba(255,255,255,.16);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+  .principles-bg .principle-card:hover{background:rgba(26,21,16,.52)}
+  .principles-bg .eyebrow,.principles-bg h2.head{text-shadow:none}
+  .principle-card .wk{color:var(--accent-2)}
+  .principle-card .num{color:rgba(255,255,255,.22)}
+
+  /* --- Pt 9: quieter Lasting Change — no sky video, restrained warm ground --- */
+  .section-flow{background:linear-gradient(180deg,var(--bg-alt) 0%,var(--bg) 70%)}
+  .section-flow .flow-video{display:none}
+  .section-flow .head,.section-flow .flow-tagline{text-shadow:none}
+
+  /* --- Client update: supplied image behind the last section (FAQ), warm-dark overlay + light text --- */
+  #faq.section-alt{background:linear-gradient(180deg,rgba(26,21,16,.84) 0%,rgba(26,21,16,.70) 45%,rgba(26,21,16,.90) 100%),url('https://cdn.katalyst-crm.com/a/977bdcb4-0641-0e2b-f00c-c0ed3a80cd15') center center / cover no-repeat}
+  #faq .eyebrow{color:#CABFB0}
+  #faq h2.head{color:#F6F1E9}
+  #faq .faq-block{border-top-color:rgba(255,255,255,.16)}
+  #faq .qa{border-bottom-color:rgba(255,255,255,.16)}
+  #faq .qa button{color:#F4EFE7}
+  #faq .qa button:hover{color:var(--accent-2)}
+  #faq .qa button .pm::before,#faq .qa button .pm::after{background:#F4EFE7}
+  #faq .qa button:hover .pm::before,#faq .qa button:hover .pm::after{background:var(--accent-2)}
+  #faq .qa .ans p{color:#CABFB0}
+  #faq .qa .ans p strong{color:#F4EFE7}
+
+  /* --- Pt 8: Architect seated-portrait slot (right column) --- */
+  .architect-portrait{position:relative;border:1px solid var(--line);overflow:hidden;background:var(--bg-card);aspect-ratio:4/5}
+  .architect-portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(12%) contrast(1.02)}
+  .architect-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.7rem;padding:2rem;color:var(--text-light);background:repeating-linear-gradient(135deg,var(--bg-card),var(--bg-card) 16px,var(--bg-alt) 16px,var(--bg-alt) 32px)}
+  .architect-ph .ph-icon{width:42px;height:42px}
+  .architect-ph .ph-label{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+  .architect-cap{margin-top:1.15rem}
+  .architect-cap .nm{font-family:var(--f-display);font-weight:600;font-size:1.12rem;letter-spacing:-.015em;color:var(--text)}
+  .architect-cap .rl{font-family:var(--f-mono);font-size:.82rem;letter-spacing:.02em;color:var(--text-muted);margin-top:.45rem;line-height:1.6}
+
+  /* --- Pt 10: static hero — no cross-fade --- */
+  .hero-slider .slide{transition:none}
 </style>
 </head>
 <body>
@@ -995,10 +1080,10 @@
 
 <!-- ==== 1. HERO — RECOGNITION ==== -->
 <section class="hero hero-quiet">
+  <!-- Pt 10: STATIC hero — single still image, no rotation (rotating-hero comparison file provided separately).
+       To try a different still, swap the src below. -->
   <div class="hero-slider" aria-hidden="true">
     <div class="slide active" style="background-image:url('https://cdn.katalyst-crm.com/a/5c2b7b38-9653-06d6-cbb4-fadc474b3eae')"></div>
-    <div class="slide" style="background-image:url('https://cdn.katalyst-crm.com/a/23f856b3-9b60-16f1-915d-f76cf9e8bb0a')"></div>
-    <div class="slide" style="background-image:url('https://cdn.katalyst-crm.com/a/65c34ed1-0811-9d89-86fc-91ae4b33113c')"></div>
   </div>
   <div class="wrap hero-main">
     <div class="hero-headline-block">
@@ -1012,25 +1097,14 @@
         </a>
         <a href="#organizations" class="hero-choice alt">
           <span class="hc-main">I&rsquo;m here for my organization</span>
-          <span class="hc-sub">Back Advantage&trade; &rarr;</span>
+          <span class="hc-sub">Workforce Capacity Advantage&trade; &rarr;</span>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==== CREDENTIAL STRIP ==== -->
-<section class="trust-strip">
-  <div class="wrap">
-    <p class="trust-title">Nearly four decades of observation</p>
-    <div class="trust-items">
-      <div class="trust-item"><span class="dot"></span>John M. Johnsrud, DC, DABCO</div>
-      <div class="trust-item"><span class="dot"></span>Former State-Appointed Medical Examiner</div>
-      <div class="trust-item"><span class="dot"></span>Creator of Total Back Makeover&trade;</div>
-      <div class="trust-item"><span class="dot"></span>Creator of Back Advantage&trade;</div>
-    </div>
-  </div>
-</section>
+<!-- Pt 2: credential strip removed — hero now flows directly into The Discovery. -->
 
 <!-- ==== 2. THE DISCOVERY ==== -->
 <section class="section" id="discovery">
@@ -1204,8 +1278,8 @@
           <img src="https://cdn.katalyst-crm.com/a/1eefe3e3-babf-9682-14cf-76383ed7c445" alt="A small team collaborating calmly in a bright workspace — coordinated organizational capacity">
         </div>
         <p class="phase-tag"><b>For Organizations</b></p>
-        <h3>Back Advantage&trade;</h3>
-        <p>The flagship organizational application of Human Capacity Architecture&trade;. Back Advantage&trade; helps leaders identify and redesign the conditions that shape workforce friction, readiness, adaptability, and sustainable capacity.</p>
+        <h3>Workforce Capacity Advantage&trade;</h3>
+        <p>The flagship organizational application of Human Capacity Architecture&trade;. Workforce Capacity Advantage&trade; helps leaders identify and redesign the conditions that shape workforce friction, readiness, adaptability, and sustainable capacity.</p>
         <a href="#begin" class="btn btn-ghost phase-cta">Learn how this applies to organizations&nbsp;&rarr;</a>
       </div>
     </div>
@@ -1217,15 +1291,11 @@
 
 <!-- ==== 7. LASTING CHANGE HAS AN ARCHITECTURE ==== -->
 <section class="section section-flow">
-  <div class="flow-video" aria-hidden="true">
-    <video autoplay muted loop playsinline preload="metadata" poster="">
-      <source src="https://cdn.katalyst-crm.com/a/c86d8050-9e73-7a6c-f26e-d7470dfaef38" type="video/mp4">
-    </video>
-  </div>
-  <div class="wrap center-wrap" style="max-width:78ch">
+  <!-- Pt 9: bright sky video removed — quiet warm-neutral ground lets the copy carry the authority. -->
+  <div class="wrap center-wrap" style="max-width:92ch">
     <span class="eyebrow">Lasting change has an architecture</span>
-    <h2 class="head" style="max-width:46ch">Progress doesn&rsquo;t break down overnight. It doesn&rsquo;t rebuild that way either.</h2>
-    <div class="body-grid" style="max-width:56ch">
+    <h2 class="head" style="max-width:64ch">Progress doesn&rsquo;t break down overnight. It doesn&rsquo;t rebuild that way either.</h2>
+    <div class="body-grid" style="max-width:78ch">
       <p>Lasting stability is built in sequence. Each step prepares the next. Each improvement strengthens what comes after it.</p>
       <p>Progress does not have to depend on a single breakthrough or another burst of effort.</p>
     </div>
@@ -1247,14 +1317,15 @@
         </div>
       </div>
       <div>
-        <div class="architect-card">
-          <div class="synergy">
-            <div class="s c"><i></i>People worked hard.</div>
-            <div class="s b"><i></i>They made progress.</div>
-            <div class="s g"><i></i>And too often, that progress did not hold.</div>
-          </div>
-          <p class="sig">John M. Johnsrud, DC, DABCO</p>
-          <p class="sig-role">Founder, Environmental Architecture for Human Capacity&trade;<br>Creator of Total Back Makeover&trade; and Back Advantage&trade;</p>
+        <!-- Pt 8: seated founder portrait (right column), replacing the previous graphic card.
+             When the portrait is uploaded, replace the whole .architect-ph block below with:
+             <img src="PATH-TO/johnsrud-seated-portrait.jpg" alt="John M. Johnsrud, DC, DABCO"> -->
+        <div class="architect-portrait">
+          <img src="https://cdn.katalyst-crm.com/a/3adc3df8-442c-eb5e-e042-807083047fe6" alt="John M. Johnsrud, DC, DABCO">
+        </div>
+        <div class="architect-cap">
+          <div class="nm">John M. Johnsrud, DC, DABCO</div>
+          <div class="rl">Founder, Environmental Architecture for Human Capacity&trade;</div>
         </div>
       </div>
     </div>
@@ -1302,9 +1373,71 @@
       </div>
       <div class="path-card">
         <p class="pt">For Organizations</p>
-        <h4>Back Advantage&trade;</h4>
+        <h4>Workforce Capacity Advantage&trade;</h4>
         <p>A stronger workforce begins with stronger conditions. If your organization is experiencing recurring friction, implementation fatigue, or declining readiness, this is where it begins.</p>
-        <a href="#" class="btn btn-primary" style="margin-top:1.5rem">Explore Back Advantage&trade;</a>
+        <a href="#" class="btn btn-primary" style="margin-top:1.5rem">Explore Workforce Capacity Advantage&trade;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== 11. FAQ (pt 11) ==== -->
+<section class="section section-alt" id="faq">
+  <div class="wrap">
+    <div class="center-wrap" style="max-width:64ch">
+      <span class="eyebrow">Frequently Asked Questions</span>
+      <h2 class="head" style="max-width:none">Questions You May Have</h2>
+    </div>
+    <div class="faq-block">
+      <div class="qa" aria-expanded="false">
+        <button>What is Environmental Architecture for Human Capacity&trade;?<span class="pm"></span></button>
+        <div class="ans">
+          <p>Environmental Architecture for Human Capacity&trade; is the discipline of identifying the conditions that influence adaptive responses and redesigning those conditions to improve stability and expand capacity.</p>
+          <p style="margin-top:1rem">It begins with a simple premise: people and organizations continuously respond to the conditions within which they operate. By understanding those conditions and what the responses may be telling us, we can make more informed changes to the conditions shaping what happens next.</p>
+        </div>
+      </div>
+      <div class="qa" aria-expanded="false">
+        <button>Is Environmental Architecture for Human Capacity&trade; healthcare or treatment?<span class="pm"></span></button>
+        <div class="ans">
+          <p>No. Environmental Architecture for Human Capacity&trade; is not healthcare, medical treatment, diagnosis, or therapy.</p>
+          <p style="margin-top:1rem">It is a nonclinical discipline focused on recognizing conditions, understanding responses as evidence, and redesigning conditions to support greater stability and capacity. When healthcare is needed, it has its own appropriate role. EAHC asks a different question: What conditions may be influencing the responses we are observing?</p>
+        </div>
+      </div>
+      <div class="qa" aria-expanded="false">
+        <button>What is the difference between Environmental Architecture for Human Capacity&trade; and Total Back Makeover&trade;?<span class="pm"></span></button>
+        <div class="ans">
+          <p>Environmental Architecture for Human Capacity&trade; is the governing discipline. Total Back Makeover&trade; is its private individual implementation.</p>
+          <p style="margin-top:1rem">Total Back Makeover&trade; uses the back as a practical lens for recognizing how everyday conditions can influence movement, stability, adaptability, recovery, confidence, and capacity. The objective is not simply to respond to pain, but to help individuals recognize and redesign the conditions their bodies have been adapting to.</p>
+        </div>
+      </div>
+      <div class="qa" aria-expanded="false">
+        <button>What is Workforce Capacity Advantage&trade;?<span class="pm"></span></button>
+        <div class="ans">
+          <p>Workforce Capacity Advantage&trade; is the organizational purchasing and implementation pathway governed by Environmental Architecture for Human Capacity&trade;.</p>
+          <p style="margin-top:1rem">It helps organizations address human capacity at both the individual and organizational levels. Employees may voluntarily participate in an employer-sponsored individual implementation, while the organization can examine and redesign conditions influencing workforce response, stability, readiness, and sustainable capacity.</p>
+        </div>
+      </div>
+      <div class="qa" aria-expanded="false">
+        <button>Why does this approach focus on conditions rather than only on symptoms or performance?<span class="pm"></span></button>
+        <div class="ans">
+          <p>Because responses do not occur in isolation. People and organizations continuously adapt to the conditions they encounter.</p>
+          <p style="margin-top:1rem">A symptom, setback, hesitation, recurring disruption, friction, or decline in performance may provide useful evidence about those conditions. Rather than focusing only on changing the response, EAHC asks what conditions may be contributing to it&mdash;and what could change if those conditions were redesigned.</p>
+        </div>
+      </div>
+      <div class="qa" aria-expanded="false">
+        <button>Do I need to have back pain for Total Back Makeover&trade; to be relevant?<span class="pm"></span></button>
+        <div class="ans">
+          <p>No. Pain can be one form of response evidence, but it is not a prerequisite.</p>
+          <p style="margin-top:1rem">The back can also provide practical information about movement, stability, adaptability, recovery, endurance, confidence, independence, and participation in everyday life. Total Back Makeover&trade; is designed to help people better understand and improve the conditions influencing those capacities.</p>
+        </div>
+      </div>
+      <div class="qa" aria-expanded="false">
+        <button>How is Environmental Architecture for Human Capacity&trade; different from ergonomics, wellness, coaching, or traditional consulting?<span class="pm"></span></button>
+        <div class="ans">
+          <p>Those fields may each address important aspects of human or organizational performance. Environmental Architecture for Human Capacity&trade; begins from a different organizing principle:</p>
+          <p style="margin-top:1rem"><strong>Conditions &rarr; Response &rarr; Stability &rarr; Capacity.</strong></p>
+          <p style="margin-top:1rem">It studies adaptive systems by asking what conditions are shaping response, what those responses provide evidence of, and what conditions may need to change for greater stability and sustainable capacity to become possible. EAHC is therefore not another wellness program, ergonomic intervention, coaching method, or consulting methodology. It is the governing discipline from which specific individual and organizational implementations are derived.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1321,7 +1454,7 @@
     </div>
     <div class="foot-meta">
       <strong>For Individuals</strong><br>Total Back Makeover&trade;<br><br>
-      <strong>Organizational Framework</strong><br>Human Capacity Architecture&trade; &rarr; Back Advantage&trade;<br><br>
+      <strong>Organizational Framework</strong><br>Human Capacity Architecture&trade; &rarr; Workforce Capacity Advantage&trade;<br><br>
       <strong>Movement</strong><br>Ownership Health&trade;
     </div>
   </div>
